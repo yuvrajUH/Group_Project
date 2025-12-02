@@ -4,9 +4,25 @@ View(BankChurners_data)
 working_data <- BankChurners_data
 View(working_data)
 
-working_data$Attrition_Num <- ifelse(working_data$Attrition_Flag == "Attrited Customer", 1, 0)
+summary(working_data)
+
+colnames(working_data)  
+# Convert Attrition Flag to numeric
+working_data$Attrition_num <- ifelse(working_data$Attrition_Flag == "Attrited Customer", 1, 0)
+
+cat("Dataset Preview:\n")
+print(head(working_data))
+
+# ---------- DATA PREPROCESSING ----------
+
+
+# Summary statistics
 cat("\nSummary of Total Transaction Count:\n")
 print(summary(working_data$Total_Trans_Ct))
+
+# ---------- VISUALISATION (BASE R) ----------
+
+# Boxplot
 boxplot(Total_Trans_Ct ~ Attrition_Flag,
         data = working_data,
         col = c("lightgreen", "salmon"),
