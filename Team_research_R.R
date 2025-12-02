@@ -29,3 +29,11 @@ boxplot(Total_Trans_Ct ~ Attrition_Flag,
         main = "Total Transaction Count vs Customer Attrition",
         xlab = "Customer Status",
         ylab = "Total Transaction Count")
+# Histogram
+hist(working_data$Total_Trans_Ct,
+     breaks = 20,
+     col = "lightblue",
+     border = "black",
+     main = "Histogram of Total Transaction Count",
+     xlab = "Total Transaction Count",
+     ylab = "Frequency")
