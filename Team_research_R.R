@@ -56,7 +56,7 @@ hist(working_data$Total_Trans_Ct,
      main = "Histogram of Total Transaction Count",
      xlab = "Total Transaction Count",
      ylab = "Frequency")
->>>>>>> 5a4f3c81749b709795ba693a00ee843d8a1320a9
+#>>>>>>> 5a4f3c81749b709795ba693a00ee843d8a1320a9
 
 # Histogram
 hist(working_data$Customer_Age,
@@ -66,3 +66,26 @@ hist(working_data$Customer_Age,
      main = "Histogram of Total Transaction Count",
      xlab = "Customer Age group",
      ylab = "Frequency")
+
+# ---------- STATISTICAL ANALYSIS ----------
+
+cat("\nPearson Correlation Test:\n")
+
+correlation <- cor(working_data$Total_Trans_Ct, working_data$Attrition_Num, method = "pearson")
+cat("Pearson Correlation Value:", round(correlation, 4), "\n")
+
+if (correlation < 0) {
+  cat("Interpretation: Negative correlation - higher transaction count reduces churn likelihood.\n")
+} else if (correlation > 0) {
+  cat("Interpretation: Positive correlation - higher transaction count increases churn likelihood.\n")
+} else {
+  cat("Interpretation: No correlation detected.\n")
+}
+
+# ---------- T-TEST ----------
+cat("\nT-Test Between Churn Groups:\n")
+t_test_result <- t.test(Total_Trans_Ct ~ Attrition_Flag, data = working_data)
+print(t_test_result)
+
+cat("\nAnalysis completed successfully.\n")
+
