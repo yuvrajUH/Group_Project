@@ -57,3 +57,12 @@ hist(working_data$Total_Trans_Ct,
      xlab = "Total Transaction Count",
      ylab = "Frequency")
 >>>>>>> 5a4f3c81749b709795ba693a00ee843d8a1320a9
+
+# Histogram
+hist(working_data$Customer_Age,
+     breaks = 10,
+     col = "lightblue",
+     border = "black",
+     main = "Histogram of Total Transaction Count",
+     xlab = "Customer Age group",
+     ylab = "Frequency")
