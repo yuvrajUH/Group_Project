@@ -8,7 +8,6 @@ summary(working_data)
 dim(working_data)
 
 data <- data.frame(sapply(working_data, class))
-
 data
 
 colnames(working_data)  
@@ -66,7 +65,7 @@ hist(working_data$Total_Trans_Ct,
 # Histogram
 hist(working_data$Customer_Age,
      breaks = 10,
-     col = "lightblue",
+     col = "red",
      border = "black",
      main = "Histogram of Total Transaction Count",
      xlab = "Customer Age group",
