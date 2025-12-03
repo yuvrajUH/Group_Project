@@ -13,3 +13,5 @@ boxplot(Total_Trans_Ct ~ Attrition_Flag,
         main = "Total Transaction Count vs Customer Attrition",
         xlab = "Customer Status",
         ylab = "Total Transaction Count")
+
+#new Line of code 
