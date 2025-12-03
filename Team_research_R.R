@@ -26,7 +26,7 @@ print(summary(working_data$Total_Trans_Ct))
 # ---------- VISUALISATION (BASE R) ----------
 
 # Boxplot
->>>>>>> 5a4f3c81749b709795ba693a00ee843d8a1320a9
+#>>>>>>> 5a4f3c81749b709795ba693a00ee843d8a1320a9
 boxplot(Total_Trans_Ct ~ Attrition_Flag,
         data = working_data,
         col = c("lightgreen", "salmon"),
