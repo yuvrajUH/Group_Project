@@ -5,6 +5,11 @@ working_data <- BankChurners_data
 View(working_data)
 
 summary(working_data)
+dim(working_data)
+
+data <- data.frame(sapply(working_data, class))
+
+data
 
 colnames(working_data)  
 # Convert Attrition Flag to numeric
